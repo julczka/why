@@ -1,11 +1,14 @@
-[<img src="https://assets.signaloid.io/add-to-signaloid-cloud-logo-dark-v6.png#gh-dark-mode-only" alt="[Add to signaloid.io]" height="30">](https://signaloid.io/repositories?connect=https://github.com/julczka/why#gh-dark-mode-only)
-[<img src="https://assets.signaloid.io/add-to-signaloid-cloud-logo-light-v6.png#gh-light-mode-only" alt="[Add to signaloid.io]" height="30">](https://signaloid.io/repositories?connect=https://github.com/julczka/why#gh-light-mode-only)
-
 # This is my cover letter. It runs.
+
+[<img src="https://assets.signaloid.io/add-to-signaloid-cloud-logo-dark-v6.png#gh-dark-mode-only" alt="[Add to signaloid.io]" height="32">](https://signaloid.io/repositories?connect=https://github.com/julczka/why#gh-dark-mode-only)[<img src="https://assets.signaloid.io/add-to-signaloid-cloud-logo-light-v6.png#gh-light-mode-only" alt="[Add to signaloid.io]" height="32">](https://signaloid.io/repositories?connect=https://github.com/julczka/why#gh-light-mode-only)
+
+▶ **[Run it on Signaloid](https://signaloid.io/repositories?connect=https://github.com/julczka/why)** &nbsp;·&nbsp; [Read the source](src/cover_letter.c)
+
+---
 
 According to my mum, the first word I learned to use too much was "why."
 
-It followed me into learning to code, and it's what brought me here — not a calculated career move, just a brain that saw what Signaloid is building and thought *I want to understand that.* So instead of only telling you, I wrote my actual learning curve as the probabilistic program in this repo. Click **Add to signaloid.io** above to run it and watch the distributions narrow as the "why" loop learns — or read [`src/cover_letter.c`](src/cover_letter.c).
+It followed me into learning to code, and it's what brought me here — not a calculated career move, just a brain that saw what Signaloid is building and thought *I want to understand that.* So instead of only telling you, I wrote my actual learning curve as the probabilistic program in this repo. Run it (the link above) and watch the distributions narrow as the "why" loop learns — or read [`src/cover_letter.c`](src/cover_letter.c).
 
 Honestly, probabilistic computation will probably always be just beyond my full grasp. But I believe even the most complex concepts can find a visual language that makes them feel learnable — and that translation, from hard to intuitive, is the work I find most meaningful in this craft.
 
