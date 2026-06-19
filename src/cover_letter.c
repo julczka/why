@@ -95,9 +95,9 @@ int main(void)
 	printf("    values alignment       → %.2f   (the narrowest — surest)\n", values_alignment);
 	printf("    domain understanding   → %.2f   (still the widest — learning)\n\n", domain_understanding);
 
-	/* The center is fixed by the input means, so I can state it exactly:
-	 * 0.30*0.94 + 0.25*0.90 + 0.20*0.88 + 0.25*(~0.75) ≈ 0.87, and the spread
-	 * is about ±0.03 — that width is what you see in the curve below. */
+	/* That 0.87 isn't the program guessing — it's just the average the
+	 * weighting above works out to. The ±0.03 is how much it wobbles
+	 * between runs. */
 	printf("    probability of a good hire → %.2f   (one draw)\n\n",
 	       probability_of_good_hire);
 	printf("Mean probability of good hire: 0.87, give or take ±0.03. "
