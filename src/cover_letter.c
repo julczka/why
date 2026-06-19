@@ -2,9 +2,11 @@
 
 /*
  * According to my mum, my most overused first word was "why." It followed
- * me into code, and it's what brought me to Signaloid. So I wrote my
- * application the only honest way I could: as a probabilistic program —
- * confidence and uncertainty both shown, neither one hidden.
+ * me into code, and it's what brought me to Signaloid. Probabilistic
+ * computation is well outside what I know — I'm a frontend developer — but
+ * I took a leap of faith and wrote my application as a program anyway,
+ * because something that actually runs felt more honest than a page of
+ * claims.
  *
  * In that same spirit: the words and the why are mine; I paired with an AI
  * to translate them into working Signaloid code.
