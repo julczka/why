@@ -12,7 +12,7 @@ It followed me into learning to code, and it's what brought me here — not a ca
 
 Honestly, probabilistic computation will probably always be just beyond my full grasp. But I believe even the most complex concepts can find a visual language that makes them feel learnable — and that translation, from hard to intuitive, is the work I find most meaningful in this craft.
 
-I've spent real time in the platform. The foundation is clean and considered, with room ahead: navigation depth as features grow, some spacing that wants attention, dark mode for a developer audience. Vue and Vuetify under the hood, both familiar territory.
+I've spent real time in the platform. The foundation is clean and considered — keeping the docs right there in the side panel, for one, is good UX. There's room ahead, too: navigation depth as features grow, some spacing that wants attention, dark mode for a developer audience. Vue and Vuetify under the hood, both familiar territory.
 
 Four years owning a cloud SaaS frontend taught me to navigate complexity without flinching: how it compounds across a system, how data flows connect and where they quietly break, and how to hold the whole picture while fixing one corner of it.
 
