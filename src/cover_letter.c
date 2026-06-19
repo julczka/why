@@ -15,12 +15,12 @@
 #include <math.h>
 
 /*
- * Each value below isn't a single number — it's a whole distribution: a
- * best guess plus an honest width around it. I print the variables
- * themselves (not numbers derived from them) so the platform draws each
- * one's curve. Hover the green output on signaloid.io to see the shape.
- * The width is sqrt(variance), and variance is the 2nd moment, so:
- *     width = sqrt(UxHwDoubleNthMoment(x, 2))
+ * Each value below is a whole distribution, not a single number. On the C0
+ * Reference core the program runs one sample at a time, and the platform
+ * builds the full curve by collecting many runs — so a printed value is just
+ * one draw (it jumps around), and the real shape lives in the graph. Every
+ * value prints in green on signaloid.io: hover it to see its curve. Watch
+ * the curve tighten through Act 1 — that narrowing is the whole story.
  */
 
 int main(void)
@@ -45,7 +45,7 @@ int main(void)
 	};
 
 	printf("ACT 1 — learning by asking why\n");
-	printf("(each line prints the value, then ± its width — the width is what changes)\n\n");
+	printf("(each green value is one draw; hover it on signaloid.io for the real curve — watch it tighten)\n\n");
 
 	for (int q = 0; q < 5; q++)
 	{
@@ -55,23 +55,22 @@ int main(void)
 		              + full_grasp * learning_rate;
 
 		printf("Question %d: %s\n", q + 1, questions[q]);
-		printf("    understanding = %.2f   ± %.2f  (narrowing)\n\n",
-		       understanding, sqrt(UxHwDoubleNthMoment(understanding, 2)));
+		printf("    understanding → %.2f   (hover for the curve)\n\n", understanding);
 	}
 
-	/* Five whys in: the value climbed, and the width fell to about a quarter of
-	 * where it began. That shrinking is the learning — and the bit still left is
-	 * the room I keep learning in. The work I love most is making hard things
-	 * feel learnable: a visual language for the difficult. (Fourteen years in
-	 * film and TV before code; the instinct for how things should look stayed.) */
-	printf("After five whys: understanding = %.2f   ± %.2f  (it started at ± 0.40).\n\n",
-	       understanding, sqrt(UxHwDoubleNthMoment(understanding, 2)));
+	/* Five whys in: wide and unsure at Q1, focused but never certain by Q5.
+	 * The width still left is the room I keep learning in. The work I love most
+	 * is making hard things feel learnable — a visual language for the
+	 * difficult. (Fourteen years in film and TV before code; the instinct for
+	 * how things should look stayed.) */
+	printf("Five whys in: wide and unsure at Q1, focused but never certain by Q5.\n");
+	printf("The width that's left is the room I keep learning in.\n\n");
 
 	/* I've spent real time in the platform — clean foundation, room to grow
 	 * (nav depth, spacing, dark mode), Vue + Vuetify underneath: home turf. */
 
 	/* ACT 2 — the part I'm sure about: things I've lived, so these curves are
-	 * tall and narrow (small ± = high confidence). */
+	 * tall and narrow. */
 
 	/* Four years owning a cloud SaaS frontend (five-plus in the craft):
 	 * complexity without flinching, knowing where data flows quietly break. */
@@ -97,19 +96,19 @@ int main(void)
 	    + 0.20 * mentorship_track_record
 	    + 0.25 * domain_understanding;
 
-	printf("ACT 2 — putting it together (value ± how sure I am)\n\n");
-	printf("    cloud SaaS ownership   = %.2f   ± %.2f\n",
-	       cloud_saas_experience, sqrt(UxHwDoubleNthMoment(cloud_saas_experience, 2)));
-	printf("    mentorship             = %.2f   ± %.2f\n",
-	       mentorship_track_record, sqrt(UxHwDoubleNthMoment(mentorship_track_record, 2)));
-	printf("    values alignment       = %.2f   ± %.2f   (tightest — surest)\n",
-	       values_alignment, sqrt(UxHwDoubleNthMoment(values_alignment, 2)));
-	printf("    domain understanding   = %.2f   ± %.2f   (widest — still learning)\n\n",
-	       domain_understanding, sqrt(UxHwDoubleNthMoment(domain_understanding, 2)));
+	printf("ACT 2 — the parts I'm sure about (hover each: tall + narrow = certain)\n\n");
+	printf("    cloud SaaS ownership   → %.2f   (tall, narrow)\n", cloud_saas_experience);
+	printf("    mentorship             → %.2f   (tall, narrow)\n", mentorship_track_record);
+	printf("    values alignment       → %.2f   (the narrowest — surest)\n", values_alignment);
+	printf("    domain understanding   → %.2f   (still the widest — learning)\n\n", domain_understanding);
 
-	printf("Mean probability of good hire: %.2f, give or take ± %.2f. "
-	       "The uncertainty is the honest part. — Julia\n",
-	       probability_of_good_hire, sqrt(UxHwDoubleNthMoment(probability_of_good_hire, 2)));
+	/* The center is fixed by the input means, so I can state it exactly:
+	 * 0.30*0.94 + 0.25*0.90 + 0.20*0.88 + 0.25*(~0.75) ≈ 0.87, and the spread
+	 * is about ±0.03 — that width is what you see in the curve below. */
+	printf("    probability of a good hire → %.2f   (one draw; hover for the whole curve)\n\n",
+	       probability_of_good_hire);
+	printf("Mean probability of good hire: 0.87, give or take ±0.03. "
+	       "The uncertainty is the honest part. — Julia\n");
 
 	return 0;
 }
