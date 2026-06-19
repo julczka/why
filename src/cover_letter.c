@@ -52,12 +52,12 @@ int main(void)
 	}
 
 	/* Five whys in: wide and unsure at Q1, focused but never certain by Q5.
-	 * The width still left is the room I keep learning in. The work I love most
+	 * The bit still left is the room I keep learning in. The work I love most
 	 * is making hard things feel learnable — a visual language for the
 	 * difficult. (Fourteen years in film and TV before code; the instinct for
 	 * how things should look stayed.) */
 	printf("Five whys in: wide and unsure at Q1, focused but never certain by Q5.\n");
-	printf("The width that's left is the room I keep learning in.\n\n");
+	printf("The bit still left is the room I keep learning in.\n\n");
 
 	/* I've spent real time in the platform — clean foundation, room to grow
 	 * (nav depth, spacing, dark mode), Vue + Vuetify underneath: home turf. */
