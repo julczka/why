@@ -18,9 +18,8 @@
  * Each value below is a whole distribution, not a single number. On the C0
  * Reference core the program runs one sample at a time, and the platform
  * builds the full curve by collecting many runs — so a printed value is just
- * one draw (it jumps around), and the real shape lives in the graph. Every
- * value prints in green on signaloid.io: hover it to see its curve. Watch
- * the curve tighten through Act 1 — that narrowing is the whole story.
+ * one draw (it jumps around), while the real answer is the curve drawn next
+ * to it. Watch the curve tighten through Act 1 — that narrowing is the story.
  */
 
 int main(void)
@@ -45,7 +44,7 @@ int main(void)
 	};
 
 	printf("ACT 1 — learning by asking why\n");
-	printf("(each green value is one draw; hover it on signaloid.io for the real curve — watch it tighten)\n\n");
+	printf("(each value is a single draw; the curve beside it is the real distribution — watch it tighten)\n\n");
 
 	for (int q = 0; q < 5; q++)
 	{
@@ -55,7 +54,7 @@ int main(void)
 		              + full_grasp * learning_rate;
 
 		printf("Question %d: %s\n", q + 1, questions[q]);
-		printf("    understanding → %.2f   (hover for the curve)\n\n", understanding);
+		printf("    understanding → %.2f\n\n", understanding);
 	}
 
 	/* Five whys in: wide and unsure at Q1, focused but never certain by Q5.
@@ -96,7 +95,7 @@ int main(void)
 	    + 0.20 * mentorship_track_record
 	    + 0.25 * domain_understanding;
 
-	printf("ACT 2 — the parts I'm sure about (hover each: tall + narrow = certain)\n\n");
+	printf("ACT 2 — the parts I'm sure about (tall + narrow = certain)\n\n");
 	printf("    cloud SaaS ownership   → %.2f   (tall, narrow)\n", cloud_saas_experience);
 	printf("    mentorship             → %.2f   (tall, narrow)\n", mentorship_track_record);
 	printf("    values alignment       → %.2f   (the narrowest — surest)\n", values_alignment);
@@ -105,7 +104,7 @@ int main(void)
 	/* The center is fixed by the input means, so I can state it exactly:
 	 * 0.30*0.94 + 0.25*0.90 + 0.20*0.88 + 0.25*(~0.75) ≈ 0.87, and the spread
 	 * is about ±0.03 — that width is what you see in the curve below. */
-	printf("    probability of a good hire → %.2f   (one draw; hover for the whole curve)\n\n",
+	printf("    probability of a good hire → %.2f   (one draw)\n\n",
 	       probability_of_good_hire);
 	printf("Mean probability of good hire: 0.87, give or take ±0.03. "
 	       "The uncertainty is the honest part. — Julia\n");
