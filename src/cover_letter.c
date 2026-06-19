@@ -14,14 +14,6 @@
 #include <stdio.h>
 #include <math.h>
 
-/*
- * Each value below is a whole distribution, not a single number. On the C0
- * Reference core the program runs one sample at a time, and the platform
- * builds the full curve by collecting many runs — so a printed value is just
- * one draw (it jumps around), while the real answer is the curve drawn next
- * to it. Watch the curve tighten through Act 1 — that narrowing is the story.
- */
-
 int main(void)
 {
 	/* ACT 1 — the "why" loop. I start knowing almost nothing: a wide curve
